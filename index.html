@@ -10,20 +10,18 @@
 </head>
 
 <body>
-  <header>5 DAY WEATHER DASBORD</header>
+  <header style="font-size: 200%; text-align: center;">5 DAY WEATHER DASBORD</header>
   <div class="container">
     <section class="row my-4">
       <div class="col-12 col-md-3">
         <h2>Search for a City</h2>
         <input type="text" class="form-control my-4" id="cityInput" placeholder="Enter city">
         <button class="btn btn-block btn-info">Search</button>
-        <div class="list-group my-4", id="buttons">
-          <button type="button" class="list-group-item list-group-item-action">The current button</button>
-        </div>
+        <div class="list-group my-4", id="buttons"></div>
       </div>
       <div class="col-12 col-md-9">
         <div class="card">
-          <div class="card-header">
+          <div class="card-header", id="today">
             Today
           </div>
           <div class="card-body justify-content-center">
@@ -40,7 +38,7 @@
             <div class="card" id="day1">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title", id="today1">Day</h5>
                 <p class="card-text" id="temp1">Temp: </p>
                 <p class="card-text" id="clouds1">Clouds:</p>
                 <p class="card-text" id="hum1">Humidity: </p>
@@ -49,8 +47,8 @@
             </div>
             <div class="card" id="day2">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+              <div class="card-body", id="today2">
+                <h5 class="card-title">Day</h5>
                 <p class="card-text" id="temp2">Temp: </p>
                 <p class="card-text" id="clouds2">Clouds:</p>
                 <p class="card-text" id="hum2">Humidity: </p>
@@ -60,7 +58,7 @@
             <div class="card" id="day3">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title", id="today3">Day</h5>
                 <p class="card-text" id="temp3">Temp: </p>
                 <p class="card-text" id="clouds3">Clouds:</p>
                 <p class="card-text" id="hum3">Humidity: </p>
@@ -70,7 +68,7 @@
             <div class="card" id="day4">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title", id="today4">Day</h5>
                 <p class="card-text" id="temp4">Temp: </p>
                 <p class="card-text" id="clouds4">Clouds:</p>
                 <p class="card-text" id="hum4">Humidity: </p>
@@ -80,7 +78,7 @@
             <div class="card" id="day5">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title", id="today5">Day</h5>
                 <p class="card-text" id="temp5">Temp: </p>
                 <p class="card-text" id="clouds5">Clouds:</p>
                 <p class="card-text" id="hum5">Humidity: </p>
@@ -93,6 +91,11 @@
       </div>
     </section>
   </div>
+  <script
+  src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+  integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+  crossorigin="anonymous"
+></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/javascript/script.js"></script>
 </body>
