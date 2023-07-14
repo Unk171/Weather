@@ -1,49 +1,41 @@
-
+// variables 
 var responseText = document.getElementById('response-text');
 var btn = document.querySelector(".btn");
 var city = document.querySelector("#cityInput");
 var oldCity = $('#cityName');
 var x = localStorage.getItem("story");
+// check storage null 
 if (x === null) { } else {
   var story = x.split(",");
-  console.log("🚀 ~ file: script.js:8 ~ story:", story, typeof (story));
-
+  // create search history list 
   for (var i = 0; i < story.length; i++) {
-
-    console.log("🚀 ~ file: script.js:46 ~ i:", i)
-
     var butt = $('<button>>');
     var buttons = $('#buttons');
     butt.addClass('list-group-item list-group-item-action');
-    // butt.attr('type', 'button');
     butt.attr('id', 'cityName');
     buttons.append(butt);
-    console.log(story[i]);
     butt.text(story[i]);
   }
 };
 
+// button event 
 btn.addEventListener('click', function () {
-  console.log(city.value + typeof (city));
   var cityString = JSON.stringify(city.value);
-  console.log("🚀 ~ file: script.js:13 ~ cityString:", cityString, typeof (cityString))
-  console.log("🚀 ~ file: script.js:32 ~ story:", story)
   if (x === null) {
+    // first city 
     story = [cityString];
     var butt = $('<button>');
     var buttons = $('#buttons');
     butt.addClass('list-group-item list-group-item-action');
     butt.attr('type', 'button');
     butt.attr('id', 'cityName');
-    console.log(story);
     buttons.append(butt);
     butt.text(story);
   } else {
     story.push(cityString);
-
   }
   localStorage.setItem('story', story);
-
+  // request to openweather for today result 
   var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city.value + '&units=imperial&appid=0d050478da7af8cff791a18ab4834659'
   fetch(requestUrl)
     .then(function (responce) {
@@ -52,8 +44,7 @@ btn.addEventListener('click', function () {
       } else { alert("Enter correct city") }
     })
     .then(function (data) {
-
-      console.log(data);
+      // render result 
       var nameval = data.name;
       var unixtime = data.dt;
       var time = dayjs.unix(unixtime).format('MMM D, YYYY');
@@ -68,9 +59,8 @@ btn.addEventListener('click', function () {
       hum.innerHTML = `Humidity: <span>${humi}%<span>`
       wind.innerHTML = `Wind Speed: <span>${wndspd} MPH<span>`
     });
-
+  // request for 5 days 
   var requestUrlForecast = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city.value + '&units=imperial&appid=0d050478da7af8cff791a18ab4834659'
-
   fetch(requestUrlForecast)
     .then(function (responce) {
       if (responce.status === 200) {
@@ -78,8 +68,7 @@ btn.addEventListener('click', function () {
       } else { alert("Enter correct city") }
     })
     .then(function (data) {
-      console.log(data);
-
+      // create varibles for results 
       var unixtime = data.list[6].dt;
       var time1 = dayjs.unix(unixtime).format('MMM D, YYYY');
       var descrip1 = data.list[6].weather[0].description;
@@ -114,7 +103,7 @@ btn.addEventListener('click', function () {
       var tempature5 = data.list[38].main.temp;
       var wndspd5 = data.list[38].wind.speed;
       var humi5 = data.list[38].main.humidity;
-
+      // displaing results 
       temp1.innerHTML = `Temperature: <span>${tempature1} F</span>`
       clouds1.innerHTML = `Clouds: <span>${descrip1}<span>`
       wind1.innerHTML = `Wind Speed: <span>${wndspd1} MPH<span>`
@@ -144,9 +133,7 @@ btn.addEventListener('click', function () {
       wind5.innerHTML = `Wind Speed: <span>${wndspd5} MPH<span>`
       hum5.innerHTML = `Humidity: <span>${humi5}%<span>`
       today5.innerHTML = `Today: <span>${time5}<span>`
-
     });
-
 });
 
 oldCity.on('click', function (event) {

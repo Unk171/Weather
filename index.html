@@ -10,18 +10,22 @@
 </head>
 
 <body>
+  <!-- header -->
   <header style="font-size: 200%; text-align: center;">5 DAY WEATHER DASBORD</header>
   <div class="container">
+    <!-- search section  -->
     <section class="row my-4">
       <div class="col-12 col-md-3">
         <h2>Search for a City</h2>
         <input type="text" class="form-control my-4" id="cityInput" placeholder="Enter city">
         <button class="btn btn-block btn-info">Search</button>
-        <div class="list-group my-4", id="buttons"></div>
+        <div class="list-group my-4" , id="buttons"></div>
       </div>
+      <!-- result section  -->
       <div class="col-12 col-md-9">
+        <!-- weather today  -->
         <div class="card">
-          <div class="card-header", id="today">
+          <div class="card-header" , id="today">
             Today
           </div>
           <div class="card-body justify-content-center">
@@ -30,24 +34,24 @@
             <p class="card-text" id="clouds">Clouds:</p>
             <p class="card-text" id="hum">Humidity: </p>
             <p class="card-text" id="wind">Wind: </p>
-
           </div>
         </div>
+        <!-- weather next 5 day  -->
         <div class="row">
           <div class="card-group">
+            <!-- day 1  -->
             <div class="card" id="day1">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title", id="today1">Day</h5>
+                <h5 class="card-title" , id="today1">Day</h5>
                 <p class="card-text" id="temp1">Temp: </p>
                 <p class="card-text" id="clouds1">Clouds:</p>
                 <p class="card-text" id="hum1">Humidity: </p>
                 <p class="card-text" id="wind1">Wind: </p>
               </div>
             </div>
+            <!-- day 2  -->
             <div class="card" id="day2">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
-              <div class="card-body", id="today2">
+              <div class="card-body" , id="today2">
                 <h5 class="card-title">Day</h5>
                 <p class="card-text" id="temp2">Temp: </p>
                 <p class="card-text" id="clouds2">Clouds:</p>
@@ -55,47 +59,44 @@
                 <p class="card-text" id="wind2">Wind: </p>
               </div>
             </div>
+            <!-- day 3 -->
             <div class="card" id="day3">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title", id="today3">Day</h5>
+                <h5 class="card-title" , id="today3">Day</h5>
                 <p class="card-text" id="temp3">Temp: </p>
                 <p class="card-text" id="clouds3">Clouds:</p>
                 <p class="card-text" id="hum3">Humidity: </p>
                 <p class="card-text" id="wind3">Wind: </p>
               </div>
             </div>
+            <!-- day 4  -->
             <div class="card" id="day4">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title", id="today4">Day</h5>
+                <h5 class="card-title" , id="today4">Day</h5>
                 <p class="card-text" id="temp4">Temp: </p>
                 <p class="card-text" id="clouds4">Clouds:</p>
                 <p class="card-text" id="hum4">Humidity: </p>
                 <p class="card-text" id="wind4">Wind: </p>
               </div>
             </div>
+            <!-- day 5  -->
             <div class="card" id="day5">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title", id="today5">Day</h5>
+                <h5 class="card-title" , id="today5">Day</h5>
                 <p class="card-text" id="temp5">Temp: </p>
                 <p class="card-text" id="clouds5">Clouds:</p>
                 <p class="card-text" id="hum5">Humidity: </p>
                 <p class="card-text" id="wind5">Wind: </p>
               </div>
             </div>
-            <span id="response-text"></span>
           </div>
         </div>
       </div>
     </section>
   </div>
-  <script
-  src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-  integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-  crossorigin="anonymous"
-></script>
+  <!-- scripts  -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/javascript/script.js"></script>
 </body>
