@@ -17,12 +17,8 @@
         <h2>Search for a City</h2>
         <input type="text" class="form-control my-4" id="cityInput" placeholder="Enter city">
         <button class="btn btn-block btn-info">Search</button>
-        <div class="list-group my-4">
+        <div class="list-group my-4", id="buttons">
           <button type="button" class="list-group-item list-group-item-action">The current button</button>
-          <button type="button" class="list-group-item list-group-item-action">A second button item</button>
-          <button type="button" class="list-group-item list-group-item-action">A third button item</button>
-          <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
-          <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
         </div>
       </div>
       <div class="col-12 col-md-9">
@@ -33,37 +29,62 @@
           <div class="card-body justify-content-center">
             <h5 class="card-title" id="cityName">City</h5>
             <p class="card-text" id="temp">Temp: </p>
+            <p class="card-text" id="clouds">Clouds:</p>
             <p class="card-text" id="hum">Humidity: </p>
             <p class="card-text" id="wind">Wind: </p>
-            
+
           </div>
         </div>
         <div class="row">
           <div class="card-group">
-            <div class="card">
+            <div class="card" id="day1">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                <p class="card-text" id="temp1">Temp: </p>
+                <p class="card-text" id="clouds1">Clouds:</p>
+                <p class="card-text" id="hum1">Humidity: </p>
+                <p class="card-text" id="wind1">Wind: </p>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="day2">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                <p class="card-text" id="temp2">Temp: </p>
+                <p class="card-text" id="clouds2">Clouds:</p>
+                <p class="card-text" id="hum2">Humidity: </p>
+                <p class="card-text" id="wind2">Wind: </p>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="day3">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                <p class="card-text" id="temp3">Temp: </p>
+                <p class="card-text" id="clouds3">Clouds:</p>
+                <p class="card-text" id="hum3">Humidity: </p>
+                <p class="card-text" id="wind3">Wind: </p>
+              </div>
+            </div>
+            <div class="card" id="day4">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text" id="temp4">Temp: </p>
+                <p class="card-text" id="clouds4">Clouds:</p>
+                <p class="card-text" id="hum4">Humidity: </p>
+                <p class="card-text" id="wind4">Wind: </p>
+              </div>
+            </div>
+            <div class="card" id="day5">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text" id="temp5">Temp: </p>
+                <p class="card-text" id="clouds5">Clouds:</p>
+                <p class="card-text" id="hum5">Humidity: </p>
+                <p class="card-text" id="wind5">Wind: </p>
               </div>
             </div>
             <span id="response-text"></span>
@@ -72,6 +93,8 @@
       </div>
     </section>
   </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/javascript/script.js"></script>
 </body>
+
 </html>
